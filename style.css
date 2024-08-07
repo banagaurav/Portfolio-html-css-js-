@@ -1,0 +1,96 @@
+html {
+    height: 100%;
+    width: 100%;
+
+  }
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+nav{
+  display: flex;
+}
+
+nav li{
+  list-style: none;
+  padding: 0 29px;
+}
+
+#head {
+  border-style: solid;
+  border: 1px 1px;
+}
+
+#foot{
+  display :flex;
+  gap: 30px;
+  border: 1px 1px;
+  border-style: solid;
+}
+
+/* Blog */
+.BlogAfterClick{
+  /* display: none; */
+  background-color: #9e657e;
+  height:100px;
+}
+
+.Blog-Box{
+  background-color: #9e657e;
+  height:100px;
+  margin: 5px 0px
+}
+
+/* Album */
+.A-A{
+  height: 100px;
+  margin: 5px;
+  background-color: #9e657e;
+}
+
+.AlbumBlock{
+  height: 100px;
+  margin: 5px;
+  background-color: #9e657e;
+}
+
+.BachelorAfterClick{
+  background: #9e657e;
+  height: 100px;
+}
+
+.BachelorAfterClick{
+  background: #9e657e;
+  height: 100px;
+}
+
+#A-Project{
+  background: #9e657e;
+  height: 100px;
+}
+
+/* Photo Block */
+.PhotoBlock{
+  background: #9e657e;
+  height: 100px;
+  margin: 5px;
+}
+
+#A-Photos p{
+  margin : 3px
+}
+
+.PhotoDiv{
+  background: #9e657e;
+  height: 100px;
+  margin: 5px;
+}
+
+/* CV-Container */
+#Container-CV{
+  background: #9e657e;
+  height: 100px;
+  margin: 5px;
+}

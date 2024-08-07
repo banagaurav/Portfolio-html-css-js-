@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>GauravRajBana</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header id="head">
+        <div>Gaurav Raj Bana</div>
+        <nav>
+                <li onclick="goHome()">Home</li>
+                <li onclick="goCV()">CV</li>
+                <li onclick="goBlog()">Blog</li>
+                <li onclick="goAlbum()">Album</li>
+        </nav>
+    </header>
+
+    <!-- Homes -->
+    <div id="Container-Home" class="Home-Body">
+
+        <div id="Academic" class="Academic">
+            <p>Academic</p>
+            <div id="Bachelor-Section" class="Academic-Cell">
+                <p>Bachelor: Bsc.Csit, TU</p>
+                <p>Himalaya Darshan College, Brt</p>
+            </div>
+            <div id="HighSchool-Section" class="Academic-Cell">
+                <p>High-School: Science, NEB</p>
+                <p>Sikshadeep High School, Brt</p>
+            </div>
+            <div id="School-Section" class="Academic-cell">
+                <p>School: , SEE</p>
+                <p>Gautam Buddha Mem.Sec. School, Brt</p>
+            </div>
+        </div>
+
+        <div class="Band">
+            <p>Band</p>
+            <div id="Mrityunjaya-Section" class="Band-Cell">
+                <p>Mrityunjaya</p>
+            </div>
+            <div id="Smriti-Section" class="Band-Cell">
+            <p >Smriti</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CV -->
+    <div id="Container-CV" class="Container-CV" hidden>
+        <p>Still in process</p>
+    </div>
+
+    <!-- Blog -->
+    <div id="Blog-Body" hidden>
+        <div id="Containet-Blog" class="Container-Blog" >
+            <select id="filter-button" class="filter-button" value="filter">
+                <option value="music">music</option>
+                <option value="Code">code</option>
+            </select>
+
+            <div id="01" class="Blog-Box Box1" onclick="blogBoxClick(n = '01')">
+                <img src="" alt="BlogImage">
+                <p>Little bit of magic a little music</p>
+                <p>What i gain from music?</p>
+                <p>Category: Music</p>   
+            </div>
+
+            <div id="02" class="Blog-Box Box2" onclick="blogBoxClick(n = '02')">
+                <img src="" alt="BlogImage">
+                <p>Habbit of code !</p>
+                <p>Set your mind set</p>
+                <p>Category: Code</p>
+            </div>
+        </div>
+        
+        <div id="BlogAfterClick01" class="BlogAfterClick BlogAfterClick01" hidden>
+            <button class="BlogAfter01 Cross_Btn" value="cross" onclick="crossBtn()">cross</button>
+            <div class="BlogAfter01">01 under construction</div>
+        </div> 
+
+        <div id="BlogAfterClick02" class="BlogAfterClick BlogAfterClick02" hidden>
+            <button class="BlogAfter02 Cross_Btn" value="cross" onclick="crossBtn()">cross</button>
+            <div class="BlogAfter02">02 under construction</div>
+        </div>
+    </div>
+
+    <!-- Album -->
+    <div id="Container-Album" hidden>
+        <!-- album ko first/front pages -->
+       <div id="A-page-01">
+         <div class="Academics AlbumBlock" onclick="goAcademicBlock()">Academics</div>
+         <div class="Project AlbumBlock"  onclick="goProjectBlock()">Projects</div>
+         <div class="Photos AlbumBlock" onclick="goPhotoBlock()">Photos</div>
+         <div class="Band AlbumBlock" onclick="goBandBlock()">Band</div>
+       </div>
+ 
+       <!-- album/Academics page 01 -->
+       <div id="A-page-02" hidden>
+         <div id="A-Academics">
+            <button onclick="goBackAlbum()">Cross</button>
+           <div id="A-A-Bachelor" class="A-A BachelorBeforeClick" onclick="goIn_A(name = 'Bachelor')" >
+             <img src="" alt="BachelorPhoto">
+             <p>Bachelor</p>
+           </div>
+ 
+           <div id="A-A-HighSchool" class="A-A HighSchoolBeforeClick" onclick="goIn_A(name = 'HighSchool')" >
+             <img src="" alt="High-SchoolPhoto">
+             <p>High-School</p>
+           </div>
+ 
+           <div id="A-A-School" class="A-A SchoolBeforeClick" onclick="goIn_A(name = 'School')" >
+             <img src="" alt="SchoolPhoto">
+             <p>School</p>
+           </div>
+ 
+           <button >band</button>
+           <button >Project</button>
+ 
+         </div>
+       </div>
+ 
+       <div id="A-page-03">
+         <div id="A-A-02-Bachelor" class="BachelorAfterClick" hidden>
+           <button onclick="go_A_page_02(name = 'Bachelor')">cross</button>
+           <p>Inside album/academics/bachelor</p>
+         </div>
+ 
+         <div id="A-A-02-HighSchool" class="BachelorAfterClick" hidden>
+           <button onclick="go_A_page_02(name = 'HighSchool')">cross</button>
+           <p>Inside album/academics/HighSchool</p>
+         </div>
+ 
+         <div id="A-A-02-School" class="BachelorAfterClick" hidden>
+           <button onclick="go_A_page_02(name = 'School')">cross</button>
+           <p>Inside album/academics/School</p>
+         </div>
+       </div>
+ 
+       <!-- album/Academics/... -->
+       <div id="A-page-03">
+         <!-- album/Academics/Bachelor -->
+         <div id="A-A-02-Bachelor" class="BachelorAfterClick" hidden>
+           <button onclick="go_A_page_02(name = 'Bachelor')">cross</button>
+           <p>Inside album/academics/bachelor</p>
+         </div>
+ 
+         <!-- album/Academics/Highschool -->
+         <div id="A-A-02-HighSchool" class="BachelorAfterClick" hidden>
+           <button onclick="go_A_page_02(name = 'HighSchool')">cross</button>
+           <p>Inside album/academics/HighSchool</p>
+         </div>
+ 
+         <!-- album/Academics/School -->
+         <div id="A-A-02-School" class="BachelorAfterClick" hidden>
+           <button onclick="go_A_page_02(name = 'School')">cross</button>
+           <p>Inside album/academics/School</p>
+         </div>
+       </div>
+ 
+       <!-- album/Project/ -->
+       <div id="A-Project" hidden>
+         <div id="A-P">
+           <button onclick="goBackFromProject()">Cross</button>
+           <p>Still in process.</p>
+ 
+           <button >band</button>
+           <button >Project</button>
+         </div>
+       </div>
+ 
+       <!-- album/Band/Page 01 -->
+       <div id="A-Band" hidden>
+         <button onclick="goBackFromBand()">cross</button>
+         <p>Band</p>
+         <div id="Mrityunjaya" onclick="goMrityunjaya()">
+           <img src="" alt="pic 01">
+           <img src="" alt="pic 02">
+           <p>Mrityunjaya</p>
+         </div>
+ 
+         
+         <div id="Smriti" onclick="goSmriti()">
+           <img src="" alt="pic 01">
+           <img src="" alt="pic 02">
+           <p>Smriti</p>
+         </div>
+ 
+         <button >band</button>
+         <button >Project</button>
+ 
+       </div>
+ 
+       <!-- album/Band/... -->
+       <div id="Band-In" >
+         <!-- album/Band/Mrityunjaya -->
+         <div id="Band-In-Mrityunjaya" hidden> 
+           <button onclick="bandCross()">cross</button>
+           <img src="" alt="in photo">
+           <p>Mrityunjaya</p>
+           <p>What i gain from music?</p>
+           <p>Category</p>
+         </div>
+ 
+         <!-- album/Band/Smriti -->
+         <div id="Band-In-Smriti" hidden>
+           <button onclick="bandCross()">cross</button>
+           <img src="" alt="in photo">
+           <p>Smriti</p>
+           <p>What i gain from music?</p>
+           <p>Category</p>
+         </div>
+ 
+     </div>
+ 
+     <!-- album/Photos/... -->
+     <div id="A-Photos" hidden>
+       <button onclick="goBackFromPhoto()">cross</button>
+       <p>Photos</p>
+       <p>Academics</p>
+       <div id="Academics" class="PhotoBlock" onclick="goInP_(name = 'Academics')"></div>
+       <p>Band</p>
+       <div id="Band" class="PhotoBlock" onclick="goInP_(name = 'Band')"></div>
+       <p>Tour</p>
+       <div id="Tour" class="PhotoBlock" onclick="goInP_(name = 'Tour')"></div>
+     </div>
+ 
+     <div id="A-Photos-Page02">
+       <!-- album/Photos/Acamedics -->
+       <div id="InPhotosAcademics" class="PhotoDiv" hidden>
+         <p>Photos-Academics</p> 
+         <button onclick="crossPhotos(name = 'Academics')">Cross</button>
+       </div>
+ 
+       <!-- album/Photos/Band-->
+       <div id="InPhotosBand" class="PhotoDiv" hidden>
+         <p>Photos-Band</p> 
+         <button onclick="crossPhotos(name = 'Band')">Cross</button>
+       </div>
+ 
+       <!-- album/Photos/Tour -->
+       <div id="InPhotosTour" class="PhotoDiv" hidden>
+         <p>Photos-Tour</p> 
+         <button onclick="crossPhotos(name = 'Tours')">Cross</button>
+       </div>
+ 
+     </div>
+ 
+   </div>
+
+    <footer id="foot">
+        <div>
+            <div id="facebook" onclick="goFacebook()" class="FootLinks" value="facebook"  ><img src="" alt="facebook"></div>
+            <div id="instagram" onclick="goInstagram()" class="FootLinks" value="instagram"><img src="" alt="insta"></div>
+            <div id="whatsapp" onclick="goWhatsapp()" class="FootLinks" value="whatsapp"><img src="" alt="whatsapp"></div>
+            <div id="discord" onclick="godiscord()" class="FootLinks" value="discord"><img src="" alt="discord"></div>
+            <div id="github" onclick="goGithub()" class="FootLinks" value="github"><img src="" alt="github"></div>
+            <div id="linkedin" onclick="goLinkedin()" class="FootLinks" value="linkedin"><img src="" alt="linkedin"></div>
+        </div>
+    </footer>
+    
+  <script src="scriptAlbum.js"></script>
+  <script src="script.js"></script>
+  <script src="scriptNav.js"></script>
+  <script src="scriptBlog.js"></script>
+
+</body>
+
+</html>
